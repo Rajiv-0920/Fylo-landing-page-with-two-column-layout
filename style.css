@@ -1,0 +1,572 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+:root {
+  --VeryDarkBlue: hsl(243, 87%, 12%);
+  --DesaturatedBlue: hsl(238, 22%, 44%);
+
+  /* ### Accent */
+
+  --BrightBlue: hsl(224, 93%, 58%);
+  --ModerateCyan: hsl(170, 45%, 43%);
+
+  /* ### Neutral */
+
+  --LightGrayishBlue: hsl(240, 75%, 98%);
+  --LightGray: hsl(0, 0%, 75%);
+  --white: #fff;
+
+  --OpenSans: "Open Sans", sans-serif;
+  --Raleway: "Raleway", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--OpenSans);
+  font-size: 1.6rem;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ---------------------------------- */
+/* ------------ Header Start --------------  */
+/* ----------------------------------  */
+
+.header {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  align-items: center;
+  padding: 20px;
+}
+
+.fylo-logo img {
+  width: 90px;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  font-size: 1.4rem;
+}
+
+.nav-item a {
+  color: var(--VeryDarkBlue);
+}
+
+.nav-item a:hover {
+  color: var(--BrightBlue);
+}
+
+/* ---------------------------------- */
+/* ----- Started Section Start ------  */
+/* ----------------------------------  */
+
+.started-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 60px 0;
+  padding: 20px;
+}
+
+.left-description-container {
+  order: 2;
+  text-align: center;
+}
+
+.started-section .left-description-container .title {
+  padding: 10px;
+  font-size: 2rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: var(--VeryDarkBlue);
+  font-weight: 700;
+}
+
+.started-section .left-description-container .text {
+  line-height: 1.5;
+  padding: 10px;
+  font-size: 1.3rem;
+  color: var(--VeryDarkBlue);
+  margin-bottom: 20px;
+}
+
+.email {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  border: 1px solid var(--VeryDarkBlue);
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 4px;
+  letter-spacing: 0.7px;
+}
+
+.email::placeholder {
+  color: var(--LightGray);
+}
+
+.email:focus {
+  outline: none;
+  border: 1px solid var(--BrightBlue);
+}
+
+.email-btn {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: var(--BrightBlue);
+  border: none;
+  color: var(--LightGrayishBlue);
+  letter-spacing: 0.9px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 1.4rem;
+}
+
+.email-btn:hover {
+  filter: brightness(130%);
+}
+
+/* ---------------------------------- */
+/* ----- Fylo Description Start ------  */
+/* ----------------------------------  */
+
+.fylo-description {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+  position: relative;
+  width: 100%;
+  z-index: 1;
+}
+
+.fylo-description::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0;
+  background-image: url("./images/bg-curve-mobile.svg");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+}
+
+.fylo-description > section,
+.fylo-description > div {
+  background-color: var(--LightGrayishBlue);
+  padding: 20px;
+  padding-bottom: 100px;
+}
+
+.fylo-description .left-description-container .title {
+  margin: 0px 0 20px 0;
+  font-size: 1.5rem;
+}
+
+.fylo-description .left-description-container .text {
+  text-align: left;
+  font-size: 1.1rem;
+  color: var(--DesaturatedBlue);
+  margin: 0px 0 30px 0;
+}
+
+br {
+  content: "" !important;
+  display: block !important;
+  margin-bottom: 1.5em !important;
+}
+
+.w-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+  margin: 20px auto 40px;
+  border-bottom: 1px solid var(--ModerateCyan);
+  padding-bottom: 5px;
+}
+
+.w-btn a {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--ModerateCyan);
+}
+
+.w-btn a:hover {
+  filter: brightness(120%);
+}
+
+.w-btn img {
+  height: 15px;
+  width: 15px;
+}
+
+/* ----- Feedback Container Start ------  */
+
+.feedback-container {
+  width: 90%;
+  background-color: var(--white);
+  margin: auto;
+  padding: 20px;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.5em;
+  letter-spacing: 0.7px;
+  color: var(--VeryDarkBlue);
+  border-radius: 5px;
+  box-shadow: 0 0 2px #07043912, 0 2px 4px #07043912, 0 4px 8px #07043912,
+    0 8px 16px #07043912, 0 16px 32px #07043912, 0 32px 64px #07043912;
+}
+
+.feedback-text {
+  margin: 10px 0;
+}
+
+.user {
+  margin: 20px 0 0 0;
+  display: flex;
+  gap: 10px;
+}
+
+.user img {
+  width: 30px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-weight: 700;
+}
+
+.user-text {
+  font-size: 0.7rem;
+}
+
+/* ---------------------------------- */
+/* ----- Started Fylo Section Start ------  */
+/* ----------------------------------  */
+
+.started-fylo-section {
+  background-color: var(--DesaturatedBlue);
+  padding: 50px 40px;
+  letter-spacing: 0.8px;
+}
+
+.started-fylo-section .title {
+  color: var(--LightGrayishBlue);
+  font-size: 1.7rem;
+  margin-bottom: 20px;
+}
+
+.started-fylo-section .text {
+  color: var(--LightGrayishBlue);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.5em;
+}
+
+.started-fylo-section .email {
+  border: 1px solid var(--DesaturatedBlue);
+  box-shadow: 0 0 2px #07043912, 0 2px 4px #07043912, 0 4px 8px #07043912,
+    0 8px 16px #07043912, 0 16px 32px #07043912, 0 32px 64px #07043912;
+}
+
+.started-fylo-section .email:focus {
+  border: 1px solid var(--VeryDarkBlue);
+}
+
+.started-fylo-section .email-btn {
+  box-shadow: 0 0 2px #07043912, 0 2px 4px #07043912, 0 4px 8px #07043912,
+    0 8px 16px #07043912, 0 16px 32px #07043912, 0 32px 64px #07043912;
+}
+
+/* ---------------------------------- */
+/* ----- Footer Start ------  */
+/* ----------------------------------  */
+
+footer {
+  background-color: var(--VeryDarkBlue);
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  color: var(--LightGrayishBlue);
+  font-size: 1rem;
+  position: relative;
+}
+
+footer a {
+  color: var(--LightGrayishBlue);
+  transition: 0.3s;
+  font-size: 1rem;
+}
+
+footer a:hover {
+  color: var(--BrightBlue);
+}
+
+.brand {
+  filter: brightness(0) invert(1);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact > div {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.footer-container img {
+  width: 20px;
+  object-fit: contain;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.link-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.social-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social-list-item {
+  height: 30px;
+  width: 30px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--LightGrayishBlue);
+  border-radius: 50%;
+  margin: 0 0 20px 0;
+}
+
+.social-list-item:hover a {
+  color: var(--BrightBlue);
+}
+
+.social-list-item:hover {
+  border: 1px solid var(--BrightBlue);
+}
+
+.attribution {
+  background-color: var(--LightGrayishBlue);
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  color: var(--DesaturatedBlue);
+  text-align: center;
+  font-size: 1rem;
+}
+
+.attribution a {
+  color: var(--VeryDarkBlue);
+  font-weight: bolder;
+}
+
+@media (min-width: 500px) {
+  html {
+    font-size: 80%;
+  }
+  .header {
+    padding: 60px;
+  }
+  .started-section {
+    padding: 60px;
+  }
+  .fylo-description > section,
+  .fylo-description > div {
+    padding: 60px;
+  }
+  .started-fylo-section {
+    padding: 60px;
+  }
+  footer {
+    padding: 60px;
+  }
+  .links {
+    flex-direction: row;
+    gap: 30px;
+  }
+}
+@media (min-width: 700px) {
+  html {
+    font-size: 80%;
+  }
+  .fylo-logo img {
+    width: 130px;
+  }
+  .nav-list {
+    gap: 30px;
+  }
+  .started-section {
+    padding: 0 100px 0;
+    margin-top: 0;
+  }
+  .email {
+    width: 100%;
+  }
+  .email-btn {
+    width: 100%;
+  }
+  .fylo-description .left-description-container {
+    padding: 0 100px 70px;
+  }
+  .fylo-description .right-container-container {
+    padding: 0 120px 0;
+  }
+  .fylo-description::after {
+    top: 0%;
+    background-image: url("./images/bg-curve-desktop.svg");
+  }
+
+  .w-btn {
+    margin: 40px 0px;
+  }
+  .feedback-container {
+    width: 70%;
+  }
+  .started-fylo-section {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #email-form {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+  }
+  .started-fylo-section > div {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+  }
+  .links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .started-section .right-image-container,
+  .fylo-description .right-image-container {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+  }
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 80%;
+  }
+  .fylo-logo img {
+    width: 200px;
+  }
+  .nav-list {
+    gap: 30px;
+  }
+  .started-section {
+    padding-top: 0;
+    margin-top: 0;
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(2, 50%);
+  }
+  .started-section .left-description-container .title {
+    font-size: 3rem;
+  }
+  .left-description-container {
+    order: 1;
+    text-align: left;
+  }
+  .right-image-container {
+    padding-left: 50px;
+    order: 2;
+  }
+  .right-image-container img {
+    height: 100%;
+    object-fit: contain;
+  }
+  .email {
+    width: 60%;
+  }
+  .email-btn {
+    width: min-content;
+  }
+  .fylo-description {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  .fylo-description .left-description-container .title {
+    font-size: 2.5rem;
+  }
+  .fylo-description::after {
+    top: -7%;
+    background-image: url("./images/bg-curve-desktop.svg");
+  }
+  .started-section .right-image-container img,
+  .fylo-description .right-image-container img {
+    height: 400px;
+  }
+  .started-section .right-image-container,
+  .fylo-description .right-image-container {
+    height: 100%;
+  }
+  .fylo-description .left-description-container {
+    padding: 60px;
+  }
+  .started-fylo-section .left-description-container .title {
+    font-size: 2.3rem;
+  }
+  .started-fylo-section {
+    padding: 100px;
+  }
+  footer {
+    padding: 100px;
+    font-size: 1.3rem;
+  }
+  footer a {
+    font-size: 1.3rem;
+  }
+}
