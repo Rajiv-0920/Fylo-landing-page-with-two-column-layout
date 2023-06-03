@@ -312,14 +312,14 @@ footer {
   flex-direction: column;
   gap: 30px;
   color: var(--LightGrayishBlue);
-  font-size: 1rem;
+  font-size: 1.5rem;
   position: relative;
 }
 
 footer a {
   color: var(--LightGrayishBlue);
   transition: 0.3s;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 footer a:hover {
